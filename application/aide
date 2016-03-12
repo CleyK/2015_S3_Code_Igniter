@@ -1,0 +1,107 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>    <script src="js/vendor/jquery.js"></script>
+<script src="js/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+</script>
+</body>
+</html>
+
+///////////////////////////////vue v_nav.php  à complèter
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+<nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+        <li class="name">
+            <h1> <a href="">TP web</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+            <a href="#"><span>Menu</span></a>
+        </li>
+    </ul>
+    <section class="top-bar-section">
+        <ul class="left">
+            <li class="divider"></li>
+            <li class="active"><a href="#">stock</a></li>
+            <li class="divider"></li>
+            <li class="has-dropdown"><a href="#">produit</a>
+                <ul class="dropdown">
+                    <li><a href=""> créer un produit </a></li>
+                    <li><a class="SousMenu" href="" >afficher/editer/supprimer les produits</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="right">
+            <li><a href="#">se deconnecter</a></li>
+        </ul>
+    </section>
+</nav>
+
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+///////////////////////////////vue v_tableProduit.php  à complèter
+<div class="row">
+    <a href=""> Ajouter un produit </a>
+    <table>
+        <caption>Recapitulatifs des produits</caption>
+        <thead> <tr><th>id</th><th>type</th><th>nom</th><th>prix</th><th>photo</th> <th>opération</th>
+        </tr> </thead>
+        <tbody>
+
+
+                <tr><td>
+
+                    </td><td>
+
+                    </td><td>
+
+                    </td><td>
+
+                    </td><td>
+
+                    </td><td>
+                        <img style="width:40px;height:40px"   src="" alt="image de " >
+                    </td>
+                    <td>
+                        <a href="">modifier</a>
+                        <a href="">supprimer</a>
+                    </td>
+                </tr>
+
+        <tbody>
+    </table>
+</div>
+
+///////////////////////////////vue v_formCreateProduit.php  à complèter
+
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+<form method="post" action="">
+    <div class="row">
+        <fieldset>
+            <legend>Ajouter un produit</legend>
+            <label>Nom
+                <input name="nom"  type="text"  size="18"  value=""/>
+            </label>
+            <label>Prix
+                <input name="prix"  type="text"  size="18"  value=""/>
+            </label>
+            <label>type
+                <input name="id_type"  type="text"  size="18"  value=""/>
+
+            </label>
+            <label>Photo
+                <input name="photo"  type="text"  size="18"  value=""/>
+            </label>
+            <input type="submit" name="ajouterProduit" value="Creer" />
+
+        </fieldset>
+    </div>
+</form>
+/////////////////////////////// le "token"
+
+<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
